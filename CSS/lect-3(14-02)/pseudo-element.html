@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo Element Example</title>
+    <style>
+        .first::first-letter{
+            font-size: 3em;
+            color: red;
+        }
+        .sec::first-line{
+            color: blue;
+        }
+        h1::after{
+            content: "✨";
+        }
+        h1::before{
+            content: "✨";
+        }
+        .sec::selection{
+            background-color: rgb(185, 124, 124);
+            color: rgb(226, 32, 129);
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Pseudo Element Example</h1>
+    <h2 class="first">Hello Krunal!!</h2>
+    <p class="sec">Welcome to TOPS Technologies <br><br>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore quae in nisi libero laudantium qui necessitatibus molestias aperiam cumque repellat voluptatum iste autem aspernatur doloribus veritatis odio, ducimus quidem totam!</p>
+
+</body>
+</html>
