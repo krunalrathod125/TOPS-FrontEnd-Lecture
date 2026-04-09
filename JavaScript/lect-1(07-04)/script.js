@@ -17,6 +17,6 @@ console.log(country);
 
 
 
-//                 let       Var        Const
-// Redeclare      No          Yes         No
-// Reassign       Yes         Yes         No
+//                let        Var        Const
+// Redeclare      No         Yes         No
+// Reassign       Yes        Yes         No

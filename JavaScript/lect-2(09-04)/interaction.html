@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Interaction</title>
+    <script>
+        function alertExample() {
+            let str = "Hello, World!";
+            alert(str);
+        }
+
+        function promptExample() {
+            let name = prompt("Please enter your name:");
+            alert("Hello, " + name + "!");
+        }
+
+        function confirmExample() {
+            let result = confirm("Do you like JavaScript?");
+            if (result) {
+                alert("Great! JavaScript is awesome.");
+            } else {
+                alert("Oh no! Maybe you'll like it later.");
+            }
+        }
+    </script>
+</head>
+<body>
+    <button onclick="alertExample()">Alert Example</button>
+    <button onclick="promptExample()">Prompt Example</button>
+    <button onclick="confirmExample()">Confirm Example</button>
+</body>
+</html>

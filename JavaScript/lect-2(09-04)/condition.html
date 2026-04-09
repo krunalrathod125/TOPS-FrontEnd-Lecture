@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Condition</title>
+    <script>
+        // JavaScript Conditions
+        function checkAge() {
+            let age = prompt("Please enter your age:");
+            if (age >= 18) {
+                alert("You are an adult.");
+            } else {
+                alert("You are not an adult.");
+            }
+        }
+
+        function checkQuadrant() {
+            let x = prompt("Enter the x coordinate:");
+            let y = prompt("Enter the y coordinate:");
+            if (x > 0 && y > 0) {
+                alert("The point is in the first quadrant.");
+            } else if (x < 0 && y > 0) {
+                alert("The point is in the second quadrant.");
+            } else if (x < 0 && y < 0) {
+                alert("The point is in the third quadrant.");
+            } else if (x > 0 && y < 0) {
+                alert("The point is in the fourth quadrant.");
+            } else {
+                alert("The point is on the axis.");
+            }
+        }
+    </script>
+</head>
+<body>
+    <button onclick="checkAge()">Check Age</button>
+    <button onclick="checkQuadrant()">Math Quadrant</button>
+</body>
+</html>
