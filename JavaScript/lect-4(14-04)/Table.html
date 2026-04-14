@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Table Example</title>
+</head>
+<body>
+
+    <fieldset>
+        <legend>Generate Fibonacci</legend>
+        <button onclick="createFibonacci()">Generate</button>
+        <div id="result"></div>
+    </fieldset>
+
+    <fieldset>
+        <legend>Create Table</legend>
+        <input type="text" id="num1" value="" placeholder="Enter the number">
+        <button onclick="createTable()">Create Table</button>
+        <div id="result1"></div>
+    </fieldset>
+
+    <fieldset>
+        <legend>Reverse Number</legend>
+        <input type="text" id="num2" value="" placeholder="Enter the number">
+        <button onclick="reverseNumber()">Reverse Number</button>
+        <div id="result2"></div>
+    </fieldset>
+
+
+
+
+    <script>
+        function createFibonacci() {
+            
+            let a = 0;
+            let b = 1;
+            let str = `${a},${b},`;
+
+            console.log("Fibonacci Series:");
+            for (let m = 1; m <= 10; m++) {
+                let ans = a + b;
+                // console.log(a);
+                str += `${ans},`;
+                a = b;
+                b = ans;
+            }
+            document.getElementById("result").innerHTML = str;
+        }
+
+
+        function createTable() {
+            let num1 = document.getElementById("num1").value;
+            let str = "";
+
+            for (let i = 1; i <= 10; i++) {
+                str += `<br>${num1} * ${i} = ${num1 * i} <br>`;
+            }
+            document.getElementById("result1").innerHTML = str;
+        }
+
+
+        function reverseNumber() {
+            let num2 = document.getElementById("num2").value;
+            let k = 0;
+            let rev = 0;
+            while (num2!= 0) {
+                let rem = num2 % 10;
+                rev = rev * 10 + rem;
+                num2 = parseInt(num2 / 10);
+            }
+            document.getElementById("result2").innerHTML = rev;
+
+
+        }
+    </script>
+</body>
+</html>
