@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main {
+            width: 100%;
+            height: 620px;
+            background-color: aqua;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            width: 800px;
+            height: 500px;
+            background-color: red;
+        }
+
+        .img {
+            width: 800px;
+            height: 350px;
+            background-color: yellow;
+            
+        }
+
+        .task {
+            width: 800px;
+            height: 150px;
+            background-color: green;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="container">
+            <div class="img">
+                <img src="images.jpg" alt="" width="800px" height="350px">
+
+            </div>
+            <div class="task">
+                <input type="button" value="Blur" onclick="imgfilter(1)">
+                <input type="button" value="Sharpen" onclick="imgfilter(2)">
+                <input type="button" value="Grayscale" onclick="imgfilter(3)">
+                <input type="button" value="Sepia" onclick="imgfilter(4)">
+                <input type="button" value="Invert" onclick="imgfilter(5)">
+                <input type="button" value="Contrast" onclick="imgfilter(6)">
+                <input type="button" value="Brightness" onclick="imgfilter(7)">
+                <input type="button" value="Saturation" onclick="imgfilter(8)">
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+    <script>
+
+        imgfilter = (num) => {
+            let img = document.querySelector(".img img");
+            switch (num) {
+                case 1:
+                    img.style.filter = "blur(5px)";
+                    break;
+                case 2:
+                    img.style.filter = "sharpen";
+                    break;
+                case 3:
+                    img.style.filter = "grayscale(100%)";
+                    break;
+                case 4:
+                    img.style.filter = "sepia(100%)";
+                    break;
+                case 5:
+                    img.style.filter = "invert(100%)";
+                    break;
+                case 6:
+                    img.style.filter = "contrast(200%)";
+                    break;
+                case 7:
+                    img.style.filter = "brightness(150%)";
+                    break;
+                case 8:
+                    img.style.filter = "saturate(200%)";
+                    break;
+                default:
+                    console.log("Invalid filter");
+            }
+        }
+
+
+
+        function blurImage() {
+            let img = document.querySelector(".img img");
+            img.style.filter = "blur(5px)";
+        }
+
+        function Sharpen(){
+            let img = document.querySelector(".img img")
+            img.style.filter = "sharpen"
+        }
+    </script>
+</body>
+</html>

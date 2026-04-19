@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function Example</title>
+</head>
+<body>
+    <script>
+
+        let pi = 3.14; // global variable (Outer variable)
+        // function declaration
+        function printMessage() {
+            console.log("Hello, this is a function declaration!");
+        }
+
+        // Call the function
+        console.log("call the function");
+        
+        printMessage();
+        // function expression
+        const printMessageExpression = function() {
+            console.log("Hello, this is a function expression!");
+        };
+        // Call the function expression
+        printMessageExpression();
+
+
+        //==================================================================================
+
+        //local variable
+        function localVariableExample() {
+            let r = prompt("Enter the radius of the circle:"); // local variable
+            r = Number(r);
+            let area = pi * r * r;
+            console.log(`The area of the circle with radius ${r} is: ${area}`);
+
+        }
+        localVariableExample();
+
+        //function with parameters
+        function calculateArea(radius) {
+            radius = Number(radius);
+            let area = pi * radius * radius;
+            console.log(`The area of the circle with radius ${radius} is: ${area}`);
+        }
+        calculateArea(prompt("Enter the radius of the circle:"));
+
+
+        //function with return value
+        function sum(a, b) {
+            return a + b;
+        }
+
+        let result = sum(5, 10);
+        console.log(`The sum of ${a} and ${b} is: ${result}`);
+
+        // frunction with 
+
+
+
+
+
+        
+    </script>
+</body>
+</html>
