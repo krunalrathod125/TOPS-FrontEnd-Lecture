@@ -2,16 +2,26 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from './assets/vite.svg'
 import heroImg from './assets/hero.png'
+import Works from './components/Works'
 // import './App.css'
 import './style.css'
+import Navbar from './components/Navbar'
+import Hero from './components/Hero'
+import About from './components/About'
+import Experience from './components/Experience'
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
-    <>
-     <h1 className='text-3xl text-center text-red-500'>Welcome to my app</h1>
-    </>
+   <>
+    <Navbar />
+    <Hero />
+    <About />
+    <Experience />
+    <Works />
+   </>
+
   )
 }
 
