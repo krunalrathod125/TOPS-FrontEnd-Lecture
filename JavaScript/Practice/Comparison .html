@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comparison</title>
+</head>
+
+<body>
+
+
+    <script>
+
+        let a = {};
+        let b = {};
+        console.log(a === b);
+        console.log(a == b);
+
+        console.log("============================================================");
+
+
+        // =====================Cloning And Merging Objects========================
+        let user = {
+            name: "Krunal",
+            age: 21,
+            Contact: 1234567890
+        }
+
+        let cloneUser = Object.assign({}, user);
+        console.log("This is Clone User: ", cloneUser);
+
+        for (let key in user) {
+            cloneUser[key] = user[key];
+        }
+        console.log("This is Clone User: ", cloneUser);
+
+        cloneUser.name = "Krunal Rathod";
+        console.log("This is Clone User: ", cloneUser);
+        console.log("This is Original User: ", user);
+
+        console.log("============================================================");
+
+        // =====================Structured Clone========================
+
+        let user1 = {
+            name: "Krunal",
+            age: 21,
+            address: {
+                city: "Rajkot",
+                state: "Gujarat"
+            }
+        }
+        let cloneUser1 = structuredClone(user1);
+        console.log("This is Original User1: ", user1);
+        console.log("This is Clone User1: ", cloneUser1);
+
+        console.log(user1.address === cloneUser1.address);
+
+        user1.address.city = "Ahmedabad";
+        console.log("This is Original User1: ", user1);
+        console.log("This is Clone User1: ", cloneUser1);
+
+        cloneUser1.address.state = "Maharashtra";
+        console.log("This is Original User1: ", user1);
+        console.log("This is Clone User1: ", cloneUser1);
+
+        console.log("============================================================");
+        let user2 = {};
+
+        console.log(user2.address ? user2.address.street : undefined);
+
+
+    </script>
+</body>
+
+</html>

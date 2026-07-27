@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deep Copy</title>
+</head>
+<body>
+    <script>
+        const a = {profile:{
+            name:"Krunal",
+            age:21
+        }
+            
+        }
+
+
+
+    
+        const b = JSON.parse(JSON.stringify(a))
+
+        b.profile.name='Rathod'
+
+        console.log(a);
+        console.log(b);
+        
+    </script>
+</body>
+</html>
